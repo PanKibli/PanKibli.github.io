@@ -2,51 +2,266 @@
 <html lang="pl">
 <head>
     <meta charset="utf-8"/>
-    <title>Kacper Bugara 3cg- JS zadanie</title>
+    <title>Kacper Bugara 3cg- JavaScript - ćwiczenia_1</title>
 </head>
+<body>
 
-<!-- Zadanie 1-->
+
+
+
 <script>
-    console.log("Witaj świecie!");
-</script>
+    // Ćwiczenie 3.1
+    document.write('<h3>Ćwiczenie 3.1</h3>')
+    var imie='Kacper';
+    var nazwisko='Bugara';
+    var wiek=19
+    var klasa='3cg';
+    document.write('Uczeń naszej szkoły nazywa się: ' + imie+' '+ nazwisko + '.<br>');
+    document.write('Uczęszcza do klasy: ' + klasa + '.<br>');
+    document.write('Ma ' + wiek + ' lat.');
 
-<!-- Zadanie 2 -->
-<script>
-    var text="Witaj świecie!";
-    console.log(text);
-</script>
+    // Ćwiczenie 3.2
+    document.write('<h3>Ćwiczenie 3.2</h3>')
+    var a = -5;
+    var b = 3;
 
-<!-- Zadanie 3 -->
-<script>
-    const e=2.718228;
-    alert(e);
-</script>
+    if (a>b) {
+        document.write('Zmienna ' + a + ' jest większa od zmiennej ' + b +'.');
+    } 
+    else if (a==b) {
+        document.write('Zmienna ' + a + ' jest równa zmiennej ' + b +'.');
+    }
+    else {
+        document.write('Zmienna ' + a + ' jest mniejsza od zmiennej ' + b +'.');
+    }
 
-<!-- Zadanie 4 -->
-<script>
-    var zmienna=12;
-    console.log(zmienna);
-    zmienna="Język Java Script";
-    console.log(zmienna);
-</script>
+    // Ćwiczenie 3.3 --- Popraw
+    document.write('<h3>Ćwiczenie 3.3</h3>');
+    
+   /* 
+    ... Wyświetl wynik według podanego wzoru.
+    Brak wzoru.
+*/
+var x = 13;
+var y = 17;
+var z = 23;
 
-<!-- Zadanie 5 -->
-<script>
-    var opis="JavaScript to język programowania.";
-    console.log("Informacja: " + opis);
-</script>
 
-<!-- Zadanie 6 -->
-<script>
-    var a=21;
-    var b=17;
-    alert(a+b);
-</script>
+if (x==y && y==z) {
+    document.write('Wszystkie zmienne są równe.');
+    }
 
-<!-- Zadanie 7 -->
-<script>
-    var liczba=prompt();
-    console.log("Wartość pobrana: "+ liczba);
-</script>
+else if (x==y) {   
+    if (x<z) {
+        document.write('Zmienne x,y są równe i wynoszą ' + x + ' i są mniejsze od zmiennej z wynoszącej ' + z +'.<br>')
+    } 
+    else if (x>z) {
+        document.write('Zmienne x,y są równe i wynoszą ' + x + ' i są większe od zmiennej z wynoszącej ' + z +'.<br>')
+    }
+}
 
+else if (x==z) {   
+    if (x<y) {
+        document.write('Zmienne x,z są równe i wynoszą ' + x + ' i są mniejsze od zmiennej y wynoszącej ' + y +'.<br>')
+    } 
+    else if (x>y) {
+        document.write('Zmienne x,z są równe i wynoszą ' + x + ' i są większe od zmiennej y wynoszącej ' + y +'.<br>')
+    }
+}
+
+else if (y==z) {   
+    if (y<x) {
+        document.write('Zmienne y,z są równe i wynoszą ' + y + ' i są mniejsze od zmiennej x wynoszącej ' + x +'.<br>')
+    } 
+    else if (y>x) {
+        document.write('Zmienne y,z są równe i wynoszą ' + y + ' i są większe od zmiennej x wynoszącej ' + x +'.<br>')
+    }
+}
+
+// -----------------------------------------------------
+
+if (x>y) {
+    if (x==y || y==z || x==z) {}
+    else if (x>z) {
+        document.write('Zmienna x wynosząca ' + x + ' jest większa od zmiennych y i z wynoszących '+y+' i '+z +'.<br>')
+    } 
+    else {
+        document.write('Zmienna x wynosząca ' + x + ' jest większa od zmiennej y wynoszącej '+y+', ale mniejsza od zmiennej z wynoszącej '+z +'.<br>')
+    } 
+}
+
+if (x<y) {
+    if (x==y || y==z || x==z) {}
+    else if (x<z) {
+        document.write('Zmienna x wynosząca ' + x + ' jest mniejsza od zmiennych y i z wynoszących '+y+' i '+z +'.<br>')
+    } 
+    else {
+        document.write('Zmienna x wynosząca ' + x + ' jest mniejsza od zmiennej y wynoszącej '+y+', ale większa od zmiennej z wynoszącej '+z +'.<br>')
+    } 
+}
+
+
+if (y>z) {
+    if (x==y || y==z || x==z) {}
+    else if (y>x) {
+        document.write('Zmienna y wynosząca ' + y + ' jest większa od zmiennych x i z wynoszących '+x+' i '+z +'.<br>')
+    } 
+    
+    else {
+        document.write('Zmienna y wynosząca ' + y + ' jest większa od zmiennej z wynoszącej '+z+',ale mniejsza od zmiennej x wynoszącej '+x +'.<br>')
+    } 
+}
+
+if (y<z) {
+    if (x==y || y==z || x==z) {}
+    else if (y<x) {
+        document.write('Zmienna y wynosząca ' + y + ' jest mniejsza od zmiennych x i z wynoszących '+x+' i '+z+'.<br>')
+    } 
+    else {
+        document.write('Zmienna y wynosząca ' + y + ' jest mniejsza od zmiennej z wynoszącej '+z+', ale większa od zmiennej x wynoszącej '+x +'.<br>')
+    } 
+}
+
+
+if (z>x) {
+    if (x==y || y==z || x==z) {}
+    else if (z>y) {
+        document.write('Zmienna z wynosząca ' + z + ' jest większa od zmiennych x i y wynoszących '+x+' i '+y +'.<br>')
+    } 
+    else {
+        document.write('Zmienna z wynosząca ' + z + ' jest większa od zmiennej y wynoszącej '+y+',ale mniejsza od zmiennej x wynoszącej '+x +'.<br>')
+    } 
+}
+
+if (z<x) {
+    if (x==y || y==z || x==z) {}
+    else if (z<y) {
+        document.write('Zmienna z wynosząca ' + z + ' jest mniejsza od zmiennych x i y wynoszących '+x+' i '+y +'.<br>')
+    } 
+    else {
+        document.write('Zmienna z wynosząca ' + z + ' jest mniejsza od zmiennej x wynoszącej '+x+', ale większa od zmiennej y wynoszącej '+y +'.<br>')
+    } 
+}
+
+
+
+
+   
+
+    // Ćwiczenie 3.4
+    document.write('<h3>Ćwiczenie 3.4</h3>');
+    var m = -10
+    var n = 12
+    var o = 4
+
+    if (m>0 && n>0 && o>0) {
+        document.write('Wszystkie zmienne są dodatnie.');
+    }
+    else if (m<0 && n<0 && o<0 ) {
+        document.write('Wszystkie zmienne są ujemne.');
+    }
+    else {
+        document.write('Zmienne mają różne znaki.');
+    }
+
+    // Ćwiczenie 3.5
+    document.write('<h3>Ćwiczenie 3.5</h3>');
+
+    var dzien = 'poniedziałek'
+
+    switch (dzien) {
+        case 'poniedziałek':
+            document.write('Cały tydzień przed nami.');
+            break;
+        case 'wtorek':
+            document.write('Kiedy będzie wolne?');
+            break;
+        case 'środa':
+            document.write('Dopiero środek tygodnia.');
+            break;
+        case 'czwartek':
+            document.write('Już czwartek.');
+            break;
+        case 'piątek':
+            document.write('Wreszcie piątek.');
+            break;
+        case 'sobota':
+            document.write('Czas na odpoczynek.');
+            break;
+        case 'niedziela':
+            document.write('Jutro znowu poniedziałek.');
+            break;
+    }
+
+    // Ćwiczenie 3.6
+    document.write('<h3>Ćwiczenie 3.6</h3>');
+
+    for (var i = 1; i<6; i++) {
+        for (var j = 1; j<6; j++) {
+            document.write(j + ' ');
+            if (j==5) 
+            {document.write('<br>');
+        } 
+        }
+    }
+
+    // Ćwiczenie 3.7
+    document.write('<h3>Ćwiczenie 3.7</h3>');
+    var j7 = 1
+    for (var i7 = 1; i7<6; i7++) {
+        for (; j7<6 ; j7++) {
+            document.write(j7 + ' ');
+        }
+        document.write('<br>');
+    j7 = i7 + 1;
+}
+
+    // Ćwiczenie 3.8
+    document.write('<h3>Ćwiczenie 3.8</h3>');
+    
+    var i8 = 0
+    var j8 = 1 
+    while (j8!=i8) {
+        while (i8<j8) {
+        document.write('Liczba i jest równa ' + i8++ + '<br>');
+        if (i8 == j8) {
+            document.write('<br>');
+        }
+    }
+    if (i8<11) {
+    i8 = 0;}
+    else {break};
+    j8++;
+    }
+    
+    // Ćwiczenie 3.9
+    document.write('<h3>Ćwiczenie 3.9</h3>');
+
+    var x9 = 10;
+    while (x9<28) {
+        document.write(x9 +'<br>');
+        x9++;
+    } 
+
+    // Ćwiczenie 3.10
+    document.write('<h3>Ćwiczenie 3.10</h3>');
+
+    for (var x10 = 1; x10 <= 10; x10++) {
+        for (var n10 = 1; n10 <10; n10++) {
+            document.write(x10 +' * ' + n10 + ' = ' + x10*n10 +'<br>');
+        }
+    }
+    
+
+    
+</script>
+        
+
+
+
+
+
+
+
+</body>
 </html>
